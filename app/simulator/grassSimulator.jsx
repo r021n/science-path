@@ -18,7 +18,7 @@ const GrassSimulator = () => {
         height: "100%",
       }}
     >
-      <Text>Simulasi mobil</Text>
+      <Text>Simulasi rumput</Text>
       <View
         style={{
           height: "100%",
