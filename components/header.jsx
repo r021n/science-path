@@ -12,7 +12,8 @@ const Header = () => {
   const loadingSound = async () => {
     console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync(
-      require("../assets/music/sound_bg.mp3")
+      require("../assets/music/sound_bg.mp3"),
+      { shouldPlay: false, isLooping: true }
     );
     setSound(sound);
   };
