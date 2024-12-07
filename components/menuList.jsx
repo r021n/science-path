@@ -7,7 +7,7 @@ const MenuList = () => {
   return (
     <View
       style={{
-        height: "87%",
+        flex: 1,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -22,10 +22,11 @@ const MenuList = () => {
           justifyContent: "space-between",
           gap: 17,
           // backgroundColor: "lime",
+          alignItems: "center",
           paddingVertical: 10,
         }}
       >
-        <View style={{ height: "100%", maxWidth: "30%" }}>
+        <View style={{ maxWidth: "30%" }}>
           <TouchableOpacity onPress={() => router.push("/introduction")}>
             <Image
               source={require("../assets/images/pendahuluan_menu.png")}
@@ -40,7 +41,6 @@ const MenuList = () => {
         <View
           style={{
             // backgroundColor: "white",
-            height: "93.65%",
             maxWidth: "70%",
             display: "flex",
             flexDirection: "column",

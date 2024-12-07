@@ -57,7 +57,7 @@ const Introduction = () => {
                 paddingHorizontal: 200,
                 // backgroundColor: "yellow",
                 marginTop: 50,
-                marginBottom: 40,
+                marginBottom: 20,
                 height: "100%",
               }}
             >

@@ -28,7 +28,7 @@ const ProfilePengembang = () => {
           style={{
             position: "absolute",
             left: 40,
-            top: 15,
+            top: 30,
           }}
         >
           <View>
@@ -48,7 +48,7 @@ const ProfilePengembang = () => {
             flex: 1,
             // backgroundColor: "yellow",
             marginHorizontal: 120,
-            marginTop: -20,
+            // marginTop: ,
           }}
         >
           <ImageBackground
@@ -69,7 +69,7 @@ const ProfilePengembang = () => {
             // backgroundColor: "yellow",
             width: "100%",
             justifyContent: "center",
-            bottom: 40,
+            bottom: 35,
           }}
         >
           <View

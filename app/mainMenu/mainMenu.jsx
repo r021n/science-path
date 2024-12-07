@@ -27,7 +27,9 @@ const MainMenu = () => {
         }}
       >
         <Header />
-        <MenuList />
+        <View style={{ flex: 1 }}>
+          <MenuList />
+        </View>
       </ImageBackground>
     </SafeAreaView>
   );
