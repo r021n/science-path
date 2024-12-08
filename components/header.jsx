@@ -1,30 +1,34 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Audio } from "expo-av";
+import { useAudio } from "../context/soundContext";
 import { useRouter } from "expo-router";
+import { SoundProvider } from "../context/soundContext";
 
 const Header = () => {
   const router = useRouter();
 
-  const [soundOn, setSoundOn] = useState(false);
-  const [sound, setSound] = useState();
+  const { soundOn, playPauseAudio } = useAudio();
 
-  const loadingSound = async () => {
-    console.log("Loading Sound");
-    const { sound } = await Audio.Sound.createAsync(
-      require("../assets/music/sound_bg.mp3"),
-      { shouldPlay: false, isLooping: true }
-    );
-    setSound(sound);
-  };
+  // const [soundOn, setSoundOn] = useState(false);
+  // const [sound, setSound] = useState();
 
-  const playAudio = async () => {
-    soundOn ? await sound.pauseAsync() : await sound.playAsync();
-  };
+  // const loadingSound = async () => {
+  //   console.log("Loading Sound");
+  //   const { sound } = await Audio.Sound.createAsync(
+  //     require("../assets/music/sound_bg.mp3"),
+  //     { shouldPlay: false, isLooping: true }
+  //   );
+  //   setSound(sound);
+  // };
 
-  useEffect(() => {
-    !sound ? loadingSound() : setSound(sound);
-  }, [sound]);
+  // const playAudio = async () => {
+  //   soundOn ? await sound.pauseAsync() : await sound.playAsync();
+  // };
+
+  // useEffect(() => {
+  //   !sound ? loadingSound() : setSound(sound);
+  // }, [sound]);
 
   return (
     <View
@@ -80,12 +84,7 @@ const Header = () => {
             </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            setSoundOn((prev) => !prev);
-            playAudio();
-          }}
-        >
+        <TouchableOpacity onPress={playPauseAudio}>
           <View
             style={{
               display: "flex",

@@ -3,6 +3,7 @@ import React, { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
+import { SoundProvider } from "../context/soundContext";
 
 const RootLayout = () => {
   SplashScreen.preventAutoHideAsync();
@@ -22,14 +23,16 @@ const RootLayout = () => {
 
   if (!fontLoaded) return null;
   return (
-    <Stack
-      onLayout={onLayoutRootView}
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="index" />
-    </Stack>
+    <SoundProvider>
+      <Stack
+        onLayout={onLayoutRootView}
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="index" />
+      </Stack>
+    </SoundProvider>
   );
 };
 
