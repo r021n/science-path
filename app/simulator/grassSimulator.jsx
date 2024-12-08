@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import WebView from "react-native-webview";
 import { useNavigation } from "expo-router";
+import Header from "../../components/header";
 
 const GrassSimulator = () => {
   const navigation = useNavigation();
@@ -14,25 +15,20 @@ const GrassSimulator = () => {
   return (
     <View
       style={{
-        backgroundColor: "yellow",
-        height: "100%",
+        flex: 1,
       }}
     >
-      <Text>Simulasi rumput</Text>
-      <View
-        style={{
-          height: "100%",
-        }}
-      >
-        <WebView
-          style={{
-            flex: 1,
-          }}
-          source={{
-            html: '<div style="display: flex; justify-content: center;"> <iframe style="" src="https://scratch.mit.edu/projects/1105834231/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> </div>',
-          }}
-        />
+      <View>
+        <Header />
       </View>
+      <WebView
+        style={{
+          flex: 1,
+        }}
+        source={{
+          uri: "https://scratch.mit.edu/projects/1105834231",
+        }}
+      />
     </View>
   );
 };
