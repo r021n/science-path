@@ -47,7 +47,7 @@ const ProfilePengembang = () => {
           style={{
             flex: 1,
             // backgroundColor: "yellow",
-            marginHorizontal: 120,
+            marginHorizontal: 100,
             // marginTop: ,
           }}
         >
