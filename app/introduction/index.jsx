@@ -20,7 +20,7 @@ const Introduction = () => {
         source={require("../../assets/bg/blue_bg.png")}
         style={{
           flex: 1,
-          justifyContent: "center",
+          justifyContent: "flex-end",
         }}
       >
         <TouchableOpacity
@@ -43,22 +43,31 @@ const Introduction = () => {
             />
           </View>
         </TouchableOpacity>
-        <View style={{ flex: 1, marginTop: 36 }}>
+        <View
+          style={{
+            // flex: 1,
+            marginTop: 36,
+            // backgroundColor: "pink",
+            height: "83%",
+          }}
+        >
           <ImageBackground
             source={require("../../assets/bg/pengantar_bg.png")}
             resizeMode="contain"
             style={{
               flex: 1,
               justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <ScrollView
               style={{
-                paddingHorizontal: 200,
+                paddingHorizontal: "15%",
                 // backgroundColor: "yellow",
                 marginTop: 50,
                 marginBottom: 20,
                 height: "100%",
+                width: "87%",
               }}
             >
               {textData.map((item, key) => (

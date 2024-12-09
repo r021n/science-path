@@ -33,7 +33,7 @@ const begin = () => {
           flexDirection: "column",
           justifyContent: "center",
           // backgroundColor: "yellow",
-          height: "80%",
+          flex: 1,
           //   alignItems: "center",
         }}
       >
@@ -44,23 +44,30 @@ const begin = () => {
             justifyContent: "space-between",
             alignItems: "center",
             // backgroundColor: "lime",
+            flex: 1,
           }}
         >
-          <View>
+          <View
+            style={{
+              width: "50%",
+              height: "100%",
+              // backgroundColor: "blue",
+              justifyContent: "center",
+            }}
+          >
             <Text
               style={{
                 fontFamily: "PBlack",
                 fontSize: 40,
-                marginRight: 400,
+                // marginRight: 400,
                 lineHeight: 43,
-                marginTop: 30,
               }}
             >
               PEMANASAN GLOBAL
             </Text>
             <Text
               style={{
-                marginRight: 400,
+                // marginRight: 400,
                 fontFamily: "PSemi",
                 textAlign: "justify",
               }}
@@ -75,7 +82,7 @@ const begin = () => {
                 paddingHorizontal: 30,
                 paddingVertical: 10,
                 backgroundColor: "#03A4BE",
-                marginRight: 620,
+                marginRight: "40%",
                 marginTop: 20,
                 borderRadius: 50,
               }}
@@ -93,15 +100,19 @@ const begin = () => {
           </View>
           <View
             style={{
-              right: 280,
+              // right: 280,
+              // backgroundColor: "pink",
+              width: "20%",
+              alignItems: "flex-end",
             }}
           >
             <Image
               source={require("../../assets/images/earth_melt.png")}
               resizeMode="contain"
               style={{
-                width: 290,
-                height: 290,
+                width: "200%",
+                height: "200%",
+                // backgroundColor: "yellow",
               }}
             />
           </View>

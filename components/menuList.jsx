@@ -11,29 +11,32 @@ const MenuList = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        paddingHorizontal: 120,
+        marginHorizontal: "10%",
+        marginVertical: "1%",
+        // backgroundColor: "pink",
       }}
     >
       <View
         style={{
           display: "flex",
+          flex: 1,
           flexDirection: "row",
-          //   height: "100%",
-          justifyContent: "space-between",
+          // height: "100%",
+          justifyContent: "center",
           gap: 17,
           // backgroundColor: "lime",
           alignItems: "center",
           paddingVertical: 10,
         }}
       >
-        <View style={{ maxWidth: "30%" }}>
+        <View style={{ flex: 1 }}>
           <TouchableOpacity onPress={() => router.push("/introduction")}>
             <Image
               source={require("../assets/images/pendahuluan_menu.png")}
               resizeMode="cover"
               style={{
-                width: 200,
-                height: 300,
+                width: "100%",
+                height: "100%",
               }}
             />
           </TouchableOpacity>
@@ -41,10 +44,12 @@ const MenuList = () => {
         <View
           style={{
             // backgroundColor: "white",
-            maxWidth: "70%",
+            width: "60%",
+            height: "100%",
+            // flex: 1,
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
+            justifyContent: "center",
             gap: 17,
           }}
         >
@@ -52,18 +57,20 @@ const MenuList = () => {
             style={{
               // backgroundColor: "blue",
               display: "flex",
-              maxWidth: "96.4%",
-              maxHeight: "50%",
+              // maxWidth: "96.4%",
+              // maxHeight: "50%",
+              flex: 1,
               flexDirection: "row",
-              justifyContent: "space-between",
+              justifyContent: "center",
               gap: 17,
             }}
           >
             <View
               style={{
                 // backgroundColor: "purple",
-                maxWidth: "50%",
-                height: "100%",
+                // maxWidth: "50%",
+                // height: "100%",
+                flex: 1,
               }}
             >
               <TouchableOpacity onPress={() => router.push("/materi")}>
@@ -71,8 +78,8 @@ const MenuList = () => {
                   source={require("../assets/images/materi_menu.png")}
                   resizeMode="cover"
                   style={{
-                    width: 223,
-                    height: 150,
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
               </TouchableOpacity>
@@ -80,8 +87,9 @@ const MenuList = () => {
             <View
               style={{
                 // backgroundColor: "purple",
-                maxWidth: "50%",
-                height: "100%",
+                // maxWidth: "50%",
+                // height: "100%",
+                flex: 1,
               }}
             >
               <TouchableOpacity onPress={() => router.push("/simulator")}>
@@ -89,8 +97,8 @@ const MenuList = () => {
                   source={require("../assets/images/simulasi_menu.png")}
                   resizeMode="cover"
                   style={{
-                    width: 223,
-                    height: 150,
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
               </TouchableOpacity>
@@ -99,7 +107,8 @@ const MenuList = () => {
           <View
             style={{
               // backgroundColor: "yellow",
-              width: "50%",
+              // width: "50%",
+              flex: 1,
             }}
           >
             <TouchableOpacity onPress={() => router.push("/soal")}>
@@ -107,8 +116,8 @@ const MenuList = () => {
                 source={require("../assets/images/soal_menu.png")}
                 resizeMode="cover"
                 style={{
-                  width: 463,
-                  height: 135,
+                  width: "100%",
+                  height: "100%",
                 }}
               />
             </TouchableOpacity>

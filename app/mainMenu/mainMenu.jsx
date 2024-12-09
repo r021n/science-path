@@ -44,7 +44,8 @@ const MainMenu = () => {
     <SafeAreaView
       style={{
         // backgroundColor: "yellow",
-        height: "100%",
+        // height: "100%",
+        flex: 1,
       }}
     >
       <StatusBar hidden={true} />
@@ -53,13 +54,12 @@ const MainMenu = () => {
         resizeMode="cover"
         style={{
           flex: 1,
-          justifyContent: "center",
+          justifyContent: "space-between",
+          // alignItems: "center",
         }}
       >
         <Header />
-        <View style={{ flex: 1 }}>
-          <MenuList />
-        </View>
+        <MenuList />
       </ImageBackground>
     </SafeAreaView>
   );
