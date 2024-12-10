@@ -3,7 +3,7 @@
     "name": "SciencePath",
     "slug": "learn-app",
     "version": "1.0.0",
-    "orientation": "horizontal",
+    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "light",
@@ -13,9 +13,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "androidNavigationBar": {
-      "visible": "immersive"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -23,7 +20,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.r021n.sciencepath"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -36,13 +38,15 @@
           "initialOrientation": "LANDSCAPE"
         }
       ],
-      "expo-font",
-      [
-        "expo-audio",
-        {
-          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
-        }
-      ]
-    ]
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "35ae96ad-3405-4223-97eb-6649593511f8"
+      }
+    }
   }
 }

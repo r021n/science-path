@@ -2,6 +2,7 @@ import { View, Text, Image, StatusBar } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Link } from "expo-router";
 import * as ScreenOrientation from "expo-screen-orientation";
+import * as NavigationBar from "expo-navigation-bar";
 
 const Index = () => {
   const [opacity, setOpacity] = useState(1);
@@ -12,8 +13,13 @@ const Index = () => {
     );
   };
 
+  const navigationConfig = async () => {
+    NavigationBar.setVisibilityAsync("hidden");
+  };
+
   useEffect(() => {
     changeOrientation();
+    navigationConfig();
   }, []);
 
   useEffect(() => {
