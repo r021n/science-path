@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { SoundProvider } from "../context/soundContext";
+import { AnswerProvider } from "../context/answerContext";
 
 const RootLayout = () => {
   SplashScreen.preventAutoHideAsync();
@@ -24,14 +25,16 @@ const RootLayout = () => {
   if (!fontLoaded) return null;
   return (
     <SoundProvider>
-      <Stack
-        onLayout={onLayoutRootView}
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="index" />
-      </Stack>
+      <AnswerProvider>
+        <Stack
+          onLayout={onLayoutRootView}
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="index" />
+        </Stack>
+      </AnswerProvider>
     </SoundProvider>
   );
 };

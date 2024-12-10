@@ -112,7 +112,16 @@ const QuestionIntro = () => {
                 }}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                router.push({
+                  pathname: "/soal/exercise/rename",
+                  params: {
+                    type: id,
+                  },
+                })
+              }
+            >
               <Image
                 source={require("../../../assets/icons/swipe_right.png")}
                 resizeMode="contain"

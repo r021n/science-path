@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { View, Text } from 'react-native'
 import { Audio } from "expo-av";
 import { useEffect } from "react";
 
