@@ -8,6 +8,8 @@ import {
 import React from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useForm } from "../context/answerContext";
+import { doc, setDoc, collection, getDocs } from "firebase/firestore";
+import { db } from "../configs/firebaseConfig";
 
 const Modal = () => {
   const router = useRouter();
@@ -15,18 +17,12 @@ const Modal = () => {
   const { userData, setUserData } = useForm();
   const { keyAnswer, type } = useLocalSearchParams();
 
-  const answerList = [];
+  let answerList = userData.userAnswers;
   const keyAnswerData = keyAnswer.split(",").map(Number);
   let score = null;
   let totalSame = 0;
 
-  const getScore = () => {
-    const answerLength = Object.getOwnPropertyNames(userData);
-
-    for (let i = 1; i <= answerLength.length - 1; i++) {
-      answerList.push(userData[`${i}`]);
-    }
-
+  const getScore = async () => {
     for (let i = 0; i < answerList.length; i++) {
       if (answerList[i] == keyAnswerData[i]) {
         totalSame++;
@@ -35,13 +31,27 @@ const Modal = () => {
 
     score = (totalSame / answerList.length) * 100;
 
+    console.log(userData.name);
     console.log(keyAnswerData);
     console.log(answerList);
     console.log(totalSame);
-    console.log(score);
+    // console.log(score);
 
-    setUserData({});
-    router.dismissTo({ pathname: "/soal" });
+    answerList = [];
+
+    // ==============> send data to firebase
+    // userData.score = score;
+    // await setDoc(doc(db, type, userData.name), userData);
+    // await setUserData({});
+
+    // ==============> read data from firebase
+    // const querySnapshot = await getDocs(collection(db, type));
+    // querySnapshot.forEach((doc) => {
+    //   console.log(doc.id, " => ", doc.data().userAnswers[0]);
+    // });
+
+    // setUserData({});
+    // router.dismissTo({ pathname: "/soal" });
   };
 
   return (
