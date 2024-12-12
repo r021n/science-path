@@ -33,6 +33,12 @@ const RootLayout = () => {
           }}
         >
           <Stack.Screen name="index" />
+          <Stack.Screen
+            name="modal"
+            options={{
+              presentation: "modal",
+            }}
+          />
         </Stack>
       </AnswerProvider>
     </SoundProvider>
