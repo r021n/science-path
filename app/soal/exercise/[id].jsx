@@ -34,7 +34,10 @@ const Exercise = () => {
   const keyAnswer = [];
 
   const getValue = async () => {
-    await setUserData({ ...userData, [id]: choosen });
+    await setUserData({
+      ...userData,
+      userAnswers: [...(userData.userAnswers || []), choosen],
+    });
     await getAllAnswer();
     router.push({
       pathname: "/modal",
@@ -63,7 +66,10 @@ const Exercise = () => {
           type: type,
         },
       });
-      setUserData({ ...userData, [id]: choosen });
+      setUserData({
+        ...userData,
+        userAnswers: [...(userData.userAnswers || []), choosen],
+      });
     }
   };
 

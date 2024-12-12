@@ -129,7 +129,8 @@ const Rename = () => {
                   });
                   setUserData({
                     ...userData,
-                    identity: { name: nama, class: kelas },
+                    name: nama,
+                    class: kelas,
                   });
                 }}
               >
