@@ -101,7 +101,7 @@ const QuestionIntro = () => {
               paddingHorizontal: 30,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => router.back()}>
               <Image
                 source={require("../../../assets/icons/swipe_left.png")}
                 resizeMode="contain"

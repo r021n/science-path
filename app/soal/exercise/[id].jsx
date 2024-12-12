@@ -6,53 +6,69 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { pretest } from "../../../soal/pretest";
+import { pretest } from "../../../data/soal/pretest";
+import { postest } from "../../../data/soal/postest";
 // import
 import { useForm } from "../../../context/answerContext";
+import { useIsFocused } from "@react-navigation/native";
 
 const Exercise = () => {
   const router = useRouter();
+  const isFocused = useIsFocused();
 
   const { id, type } = useLocalSearchParams();
   const nextId = parseInt(id) + 1;
+  // const prevId = parseInt(id) - 1;
 
-  const data = pretest[parseInt(id) - 1];
+  const data =
+    type === "pretest" ? pretest[parseInt(id) - 1] : postest[parseInt(id) - 1];
+  const keyData = type === "pretest" ? pretest : postest;
   const choice = data.pilihan;
 
   const { userData, setUserData } = useForm();
   const choosenValue = userData[`${id}`] || null;
   const [choosen, setChoosen] = useState(choosenValue);
 
-  const answerList = [];
   const keyAnswer = [];
-  let totalSame = 0;
 
-  const getAllAnswer = () => {
-    const answerLength = Object.getOwnPropertyNames(userData);
-
-    for (let i = 1; i <= answerLength.length - 1; i++) {
-      answerList.push(userData[`${i}`]);
-    }
-
-    for (let i = 0; i <= pretest.length - 1; i++) {
-      keyAnswer.push(pretest[i].kunci);
-    }
-
-    for (let i = 0; i < answerList.length; i++) {
-      if (answerList[i] === keyAnswer[i]) {
-        totalSame++;
-      }
-    }
-
-    console.log(totalSame);
-
-    // console.log(answerList);
-    // console.log(keyAnswer);
+  const getValue = async () => {
+    await setUserData({ ...userData, [id]: choosen });
+    await getAllAnswer();
+    router.push({
+      pathname: "/modal",
+      params: { keyAnswer: keyAnswer, type: type },
+    });
   };
 
-  // console.log(userData);
+  const getAllAnswer = () => {
+    for (let i = 0; i <= keyData.length - 1; i++) {
+      keyAnswer.push(keyData[i].kunci);
+    }
+  };
+
+  const previous = () => {
+    if (isFocused) {
+      router.back();
+    }
+  };
+
+  const continou = () => {
+    if (isFocused) {
+      router.push({
+        pathname: "/soal/exercise/[id]",
+        params: {
+          id: nextId,
+          type: type,
+        },
+      });
+      setUserData({ ...userData, [id]: choosen });
+    }
+  };
+
+  isFocused && console.log(userData);
+
   // console.log(choosenValue);
 
   return (
@@ -65,6 +81,30 @@ const Exercise = () => {
           justifyContent: "center",
         }}
       >
+        <View
+          style={{
+            display: "flex",
+            width: 55,
+            height: 55,
+            backgroundColor: "black",
+            position: "absolute",
+            top: 30,
+            left: 30,
+            borderRadius: 50,
+            justifyContent: "center",
+          }}
+        >
+          <Text
+            style={{
+              color: "white",
+              fontFamily: "PBold",
+              fontSize: 25,
+              textAlign: "center",
+            }}
+          >
+            {data.id}
+          </Text>
+        </View>
         <ScrollView
           style={{
             flex: 1,
@@ -108,7 +148,9 @@ const Exercise = () => {
           >
             {choice.map((item, key) => (
               <TouchableOpacity
-                onPress={() => setChoosen(key)}
+                onPress={() => {
+                  setChoosen(key);
+                }}
                 key={key}
                 style={{
                   backgroundColor: key === choosen ? "black" : "white",
@@ -157,7 +199,7 @@ const Exercise = () => {
             }}
           >
             {parseInt(id) >= 2 && (
-              <TouchableOpacity onPress={() => router.back()}>
+              <TouchableOpacity onPress={previous}>
                 <Image
                   source={require("../../../assets/icons/swipe_left.png")}
                   resizeMode="contain"
@@ -171,18 +213,7 @@ const Exercise = () => {
             )}
 
             {parseInt(id) < pretest.length ? (
-              <TouchableOpacity
-                onPress={() => {
-                  router.push({
-                    pathname: "/soal/exercise/[id]",
-                    params: {
-                      id: nextId,
-                      type: type,
-                    },
-                  });
-                  setUserData({ ...userData, [id]: choosen });
-                }}
-              >
+              <TouchableOpacity onPress={continou}>
                 <Image
                   source={require("../../../assets/icons/swipe_right.png")}
                   resizeMode="contain"
@@ -196,8 +227,7 @@ const Exercise = () => {
             ) : (
               <TouchableOpacity
                 onPress={() => {
-                  setUserData({ ...userData, [id]: choosen });
-                  getAllAnswer();
+                  getValue();
                 }}
               >
                 <Text>Selesaikan</Text>
