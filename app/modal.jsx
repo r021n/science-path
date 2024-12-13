@@ -53,13 +53,6 @@ const Modal = () => {
 
     score = (totalSame / keyAnswerData.length) * 100;
 
-    console.log("nama user: ", userData.name);
-    console.log("Kunci jawaban: ", keyAnswerData);
-    console.log("jawaban siswa: ", answerList);
-    console.log("Jumlah benar: ", totalSame);
-    console.log("jumlah salah: ", keyAnswerData.length - totalSame);
-    console.log("nilai yang didapat: ", score);
-
     // ==============> Store data to spreedsheet
 
     const postestScript = process.env.POSTEST_KEY;

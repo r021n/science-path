@@ -73,10 +73,6 @@ const Exercise = () => {
     }
   };
 
-  isFocused && console.log(userData);
-
-  // console.log(choosenValue);
-
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
