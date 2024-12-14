@@ -33,7 +33,7 @@ const Index = () => {
   return (
     <View
       style={{
-        height: "100%",
+        flex: 1,
       }}
     >
       <StatusBar hidden={true} />
@@ -41,6 +41,10 @@ const Index = () => {
         <Image
           source={require("../assets/bg/start_page.png")}
           resizeMode="cover"
+          style={{
+            flex: 1,
+            justifyContent: "center",
+          }}
         />
       </Link>
       <View
