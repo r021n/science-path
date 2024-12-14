@@ -26,7 +26,7 @@ const CarSimulator = () => {
           flex: 1,
         }}
         source={{
-          uri: "https://scratch.mit.edu/projects/1105834231",
+          uri: "https://scratch.mit.edu/projects/1105833881",
         }}
       />
     </View>
