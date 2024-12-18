@@ -6,12 +6,24 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import React from "react";
+import { useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import Materi1 from "../../../components/materi/materi1/materi1";
+import Materi2 from "../../../components/materi/materi2/materi2";
 
 const Intro = () => {
   const router = useRouter();
-  const { id, title, content } = useLocalSearchParams();
+  const { id, title } = useLocalSearchParams();
+
+  const [page, setPage] = useState(1);
+
+  const prevPage = () => {
+    if (page > 1) setPage((page) => page - 1);
+  };
+
+  const nextPage = () => {
+    if (page < 3) setPage((page) => page + 1);
+  };
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
@@ -85,17 +97,8 @@ const Intro = () => {
               >
                 {title}
               </Text>
-              <Text
-                style={{
-                  color: "white",
-                  fontFamily: "PRegular",
-                  fontSize: 12,
-                  marginTop: 20,
-                  textAlign: "justify",
-                }}
-              >
-                {content}
-              </Text>
+
+              {id == 1 ? <Materi1 page={page} /> : <Materi2 />}
             </ScrollView>
           </ImageBackground>
         </View>
@@ -121,7 +124,7 @@ const Intro = () => {
               paddingHorizontal: 30,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={prevPage}>
               <Image
                 source={require("../../../assets/icons/swipe_left.png")}
                 resizeMode="contain"
@@ -132,7 +135,7 @@ const Intro = () => {
                 }}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={nextPage}>
               <Image
                 source={require("../../../assets/icons/swipe_right.png")}
                 resizeMode="contain"
