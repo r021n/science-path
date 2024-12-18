@@ -4,6 +4,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Image,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 import { useRouter } from "expo-router";
@@ -67,18 +68,22 @@ const ProfilePengembang = () => {
             source={require("../../assets/bg/pengembang_bg.png")}
             resizeMode="contain"
             style={{
-              flex: 1,
+              // flex: 1,
+              width: 600,
+              height: 300,
               justifyContent: "center",
+              // backgroundColor: "skyblue",
+              alignSelf: "center",
             }}
           >
-            <View
+            <ScrollView
               style={{
-                width: "100%",
-                height: "80%",
+                marginBottom: 36,
+                marginTop: 70,
               }}
             >
               {num === 1 ? <Dospem /> : <Mahasiswa />}
-            </View>
+            </ScrollView>
           </ImageBackground>
         </View>
 

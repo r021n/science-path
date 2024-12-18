@@ -5,26 +5,31 @@ const Mahasiswa = () => {
   return (
     <View
       style={{
-        flex: 1,
         flexDirection: "column",
-        // backgroundColor: "pink",
         justifyContent: "center",
         alignItems: "center",
+        flex: 1,
+        paddingVertical: 35,
       }}
     >
       <View
         style={{
-          display: "flex",
+          flex: 1,
           flexDirection: "row",
           alignItems: "center",
+          justifyContent: "center",
           gap: 40,
-          marginTop: 35,
         }}
       >
         <Image
           source={require("../../assets/images/mahasiswa.jpg")}
           resizeMode="contain"
-          style={{ width: 100, height: 150 }}
+          style={{
+            height: 120,
+            width: 80,
+            justifyContent: "center",
+            backgroundColor: "skyblue",
+          }}
         />
         <View>
           <Text

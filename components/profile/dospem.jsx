@@ -5,17 +5,16 @@ const Dospem = () => {
   return (
     <View
       style={{
-        flex: 1,
+        height: "100%",
         flexDirection: "column",
-        // backgroundColor: "pink",
         justifyContent: "center",
         alignItems: "center",
+        // marginBottom: 20,
       }}
     >
       <Text
         style={{
           textAlign: "center",
-          marginTop: 75,
           fontFamily: "PBold",
           fontSize: 20,
         }}
@@ -29,7 +28,7 @@ const Dospem = () => {
           justifyContent: "center",
           alignItems: "center",
           gap: 100,
-          marginTop: -50,
+          paddingVertical: 10,
         }}
       >
         <View
@@ -65,8 +64,8 @@ const Dospem = () => {
 
 const styles = StyleSheet.create({
   image: {
-    height: 145,
-    width: 100,
+    height: 120,
+    width: 90,
   },
   name: { textAlign: "center", fontFamily: "PSemi" },
 });
