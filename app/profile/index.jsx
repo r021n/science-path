@@ -5,11 +5,21 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "expo-router";
+import Dospem from "../../components/profile/dospem";
+import Mahasiswa from "../../components/profile/mahasiswa";
 
 const ProfilePengembang = () => {
   const router = useRouter();
+  const [num, setNum] = useState(1);
+
+  const nextProfile = () => {
+    if (num < 2) setNum((num) => num + 1);
+  };
+  const prevProfile = () => {
+    if (num > 1) setNum((num) => num - 1);
+  };
   return (
     <View
       style={{
@@ -47,6 +57,8 @@ const ProfilePengembang = () => {
           style={{
             flex: 1,
             // backgroundColor: "yellow",
+            // alignItems: "center"
+            justifyContent: "center",
             marginHorizontal: 100,
             // marginTop: ,
           }}
@@ -58,7 +70,16 @@ const ProfilePengembang = () => {
               flex: 1,
               justifyContent: "center",
             }}
-          ></ImageBackground>
+          >
+            <View
+              style={{
+                width: "100%",
+                height: "80%",
+              }}
+            >
+              {num === 1 ? <Dospem /> : <Mahasiswa />}
+            </View>
+          </ImageBackground>
         </View>
 
         <View
@@ -82,7 +103,7 @@ const ProfilePengembang = () => {
               paddingHorizontal: 30,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={prevProfile}>
               <Image
                 source={require("../../assets/icons/swipe_left.png")}
                 resizeMode="contain"
@@ -93,7 +114,7 @@ const ProfilePengembang = () => {
                 }}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={nextProfile}>
               <Image
                 source={require("../../assets/icons/swipe_right.png")}
                 resizeMode="contain"
