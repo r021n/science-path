@@ -3,21 +3,39 @@ import React from "react";
 
 const Materi2 = () => {
   const data = [
-    { id: "1.", content: "Melakukan penghematan listrik." },
-    { id: "2.", content: "Menanam pohon dan reboisasi." },
-    { id: "3.", content: "Melakukan tebang pilih." },
-    { id: "4.", content: "Menggunakan energi alternatif." },
+    {
+      id: "1.",
+      content:
+        "Melakukan penghematan listrik dengan mematikan lampu, kipas angin, atau alat elektronik saat tidak digunakan.",
+    },
+    {
+      id: "2.",
+      content:
+        "Melakukan kegiatan penghijauan di sekolah atau lingkungan sekitar, karena pohon mampu menyerap CO₂ dan menghasilkan oksigen.",
+    },
+    {
+      id: "3.",
+      content:
+        "Menggunakan energi alternatif seperti memanfaatkan cahaya matahari untuk menghasilkan listrik melalui panel surya, menggunakan aliran air sungai atau bendungan untuk menghasilkan listrik, dll.",
+    },
+    {
+      id: "4.",
+      content:
+        "Mengurangi penggunaan alat elektronik maupun produk yang menghasilkan CFC seperti AC, kulkas, semprotan aerosol, dll.",
+    },
     {
       id: "5.",
-      content: "Mengurangi penggunaan alat elektronik yang menghasilkan CFC.",
+      content:
+        "Memilih berjalan kaki, naik sepeda, atau menggunakan transportasi umum agar mengurangi penggunaan kendaraan berbahan bakar fosil.",
     },
     {
       id: "6.",
-      content: "Mengurangi penggunaan kendaraan berbahan bakar fosil.",
+      content: "Melakukan 3R yaitu reduce, reuse, dan recycle.",
     },
     {
       id: "7.",
-      content: "Melakukan 3R yaitu reduce, reuse, dan recycle.",
+      content:
+        "Memberitahu teman dan keluarga tentang pentingnya mencegah pemanasan global.",
     },
   ];
   return (

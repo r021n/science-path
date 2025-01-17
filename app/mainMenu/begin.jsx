@@ -94,7 +94,7 @@ const begin = () => {
                   color: "white",
                 }}
               >
-                Get Start
+                Mulai
               </Text>
             </TouchableOpacity>
           </View>

@@ -41,11 +41,11 @@ const Sub3 = () => {
     <View>
       <Text style={styles.textStyle}>2. Dampak</Text>
       <Image
-        source={require("../../../../assets/images/dampak.png")}
+        source={require("../../../../assets/images/dampak.jpg")}
         resizeMode="contain"
         style={{
           width: 380,
-          height: 173,
+          height: 250,
           marginTop: 10,
           marginHorizontal: "auto",
         }}

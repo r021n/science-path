@@ -26,7 +26,7 @@ const GrassSimulator = () => {
           flex: 1,
         }}
         source={{
-          uri: "https://scratch.mit.edu/projects/1105834231",
+          uri: "https://scratch.mit.edu/projects/1112645660",
         }}
       />
     </View>

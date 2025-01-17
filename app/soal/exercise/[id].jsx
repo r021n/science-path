@@ -5,6 +5,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  ToastAndroid,
 } from "react-native";
 import { useEffect, useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -12,66 +13,74 @@ import { pretest } from "../../../data/soal/pretest";
 import { postest } from "../../../data/soal/postest";
 // import
 import { useForm } from "../../../context/answerContext";
-import { useIsFocused } from "@react-navigation/native";
 
 const Exercise = () => {
   const router = useRouter();
-  const isFocused = useIsFocused();
 
-  const { id, type } = useLocalSearchParams();
-  const nextId = parseInt(id) + 1;
-  // const prevId = parseInt(id) - 1;
+  const { id } = useLocalSearchParams();
+  const [currentNum, setCurrentNum] = useState(1);
 
   const data =
-    type === "pretest" ? pretest[parseInt(id) - 1] : postest[parseInt(id) - 1];
-  const keyData = type === "pretest" ? pretest : postest;
+    id === "pretest" ? pretest[currentNum - 1] : postest[currentNum - 1];
+  const keyData = id === "pretest" ? pretest : postest;
   const choice = data.pilihan;
 
   const { userData, setUserData } = useForm();
-  const choosenValue = userData[`${id}`] || null;
-  const [choosen, setChoosen] = useState(choosenValue);
+  const selects = ["A", "B", "C", "D"];
+
+  // const [userAnswers, setUserAnswers] = useState([]);
+  const [choosen, setChoosen] = useState(null);
+
+  useEffect(() => {
+    setChoosen(userData.userAnswers[currentNum - 1]);
+  }, [currentNum]);
 
   const keyAnswer = [];
 
-  const getValue = async () => {
-    await setUserData({
-      ...userData,
-      userAnswers: [...(userData.userAnswers || []), choosen],
-    });
-    await getAllAnswer();
+  const getValue = () => {
+    // pushUserAnswer(choosen);
+    pushUserData(choosen);
+
+    getAllKeyAnswer();
     router.push({
       pathname: "/modal",
-      params: { keyAnswer: keyAnswer, type: type },
+      params: { keyAnswer: keyAnswer, type: id },
     });
   };
 
-  const getAllAnswer = () => {
+  const getAllKeyAnswer = () => {
     for (let i = 0; i <= keyData.length - 1; i++) {
       keyAnswer.push(keyData[i].kunci);
     }
   };
 
+  const pushUserData = (value) => {
+    const newData = [...userData.userAnswers];
+    newData[currentNum - 1] = value;
+    setUserData({
+      ...userData,
+      userAnswers: newData,
+    });
+  };
+
+  // const pushUserAnswer = (answer) => {
+  //   const updateAnswer = [...userAnswers];
+  //   updateAnswer[currentNum - 1] = answer;
+  //   setUserAnswers(updateAnswer);
+  // };
+
   const previous = () => {
-    if (isFocused) {
-      router.back();
-    }
+    setCurrentNum((currentNum) => currentNum - 1);
   };
 
   const continou = () => {
-    if (isFocused) {
-      router.push({
-        pathname: "/soal/exercise/[id]",
-        params: {
-          id: nextId,
-          type: type,
-        },
-      });
-      setUserData({
-        ...userData,
-        userAnswers: [...(userData.userAnswers || []), choosen],
-      });
-    }
+    // pushUserAnswer(choosen);
+    pushUserData(choosen);
+    setCurrentNum((currentNum) => currentNum + 1);
   };
+
+  // console.log(userAnswers);
+  console.log(userData);
 
   return (
     <View style={{ flex: 1 }}>
@@ -104,7 +113,7 @@ const Exercise = () => {
               textAlign: "center",
             }}
           >
-            {data.id}
+            {currentNum}
           </Text>
         </View>
         <ScrollView
@@ -114,7 +123,7 @@ const Exercise = () => {
             marginTop: 40,
             marginBottom: 70,
             // paddingBottom: 10,
-            // backgroundColor: "yellow",
+            // backgroundColor: "pink",
             gap: 18,
           }}
         >
@@ -145,7 +154,7 @@ const Exercise = () => {
               marginTop: 16,
               paddingBottom: 30,
               // backgroundColor: "lime",
-              alignItems: "center",
+              // alignItems: "center",
             }}
           >
             {choice.map((item, key) => (
@@ -155,19 +164,35 @@ const Exercise = () => {
                 }}
                 key={key}
                 style={{
-                  backgroundColor: key === choosen ? "black" : "white",
-                  padding: 10,
                   marginVertical: 6,
-                  borderWidth: 1,
-                  borderColor: "black",
-                  borderRadius: 10,
+                  // backgroundColor: "yellow",
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "85%",
                 }}
               >
+                <Text
+                  style={{
+                    marginRight: 5,
+                    borderWidth: 1,
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 10,
+                    backgroundColor: key === choosen ? "black" : "white",
+                    color: key === choosen ? "white" : "black",
+                  }}
+                >
+                  {selects[key]}
+                </Text>
                 <Text
                   style={{
                     fontFamily: "PMedium",
                     fontSize: 14,
                     color: key === choosen ? "white" : "black",
+                    borderWidth: 1,
+                    borderRadius: 10,
+                    padding: 10,
+                    backgroundColor: key === choosen ? "black" : "white",
                   }}
                 >
                   {item}
@@ -197,31 +222,30 @@ const Exercise = () => {
               // backgroundColor: "pink",
               width: "100%",
               paddingHorizontal: 30,
-              gap: 300,
+              gap: 400,
             }}
           >
-            {parseInt(id) >= 2 && (
-              <TouchableOpacity onPress={previous}>
-                <Image
-                  source={require("../../../assets/icons/swipe_left.png")}
-                  resizeMode="contain"
-                  style={{
-                    width: 100,
-                    height: 30,
-                    // backgroundColor: "lime"
-                  }}
-                />
-              </TouchableOpacity>
-            )}
+            <TouchableOpacity onPress={previous}>
+              <Image
+                source={require("../../../assets/icons/swipe_left.png")}
+                resizeMode="contain"
+                style={{
+                  width: 100,
+                  height: 50,
+                  display: currentNum >= 2 ? "block" : "none",
+                  // backgroundColor: "lime"
+                }}
+              />
+            </TouchableOpacity>
 
-            {parseInt(id) < pretest.length ? (
+            {currentNum < pretest.length ? (
               <TouchableOpacity onPress={continou}>
                 <Image
                   source={require("../../../assets/icons/swipe_right.png")}
                   resizeMode="contain"
                   style={{
                     width: 100,
-                    height: 30,
+                    height: 50,
                     //  backgroundColor: "lime"
                   }}
                 />
@@ -231,8 +255,22 @@ const Exercise = () => {
                 onPress={() => {
                   getValue();
                 }}
+                style={{
+                  backgroundColor: "#00A9C1",
+                  paddingVertical: 10,
+                  paddingHorizontal: 15,
+                  borderRadius: 20,
+                }}
               >
-                <Text>Selesaikan</Text>
+                <Text
+                  style={{
+                    fontFamily: "PMedium",
+                    fontSize: 13,
+                    color: "white",
+                  }}
+                >
+                  Selesaikan
+                </Text>
               </TouchableOpacity>
             )}
           </View>

@@ -82,7 +82,7 @@ const ProfilePengembang = () => {
                 marginTop: 70,
               }}
             >
-              {num === 1 ? <Dospem /> : <Mahasiswa />}
+              {num === 1 ? <Mahasiswa /> : <Dospem />}
             </ScrollView>
           </ImageBackground>
         </View>
@@ -114,7 +114,8 @@ const ProfilePengembang = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
+                  height: 50,
+                  display: num > 1 ? "block" : "none",
                   // backgroundColor: "lime"
                 }}
               />
@@ -125,7 +126,8 @@ const ProfilePengembang = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
+                  height: 50,
+                  display: num < 2 ? "block" : "none",
                   //  backgroundColor: "lime"
                 }}
               />

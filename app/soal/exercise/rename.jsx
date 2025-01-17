@@ -14,6 +14,7 @@ import { AnswerProvider, useForm } from "../../../context/answerContext";
 const Rename = () => {
   const [nama, setNama] = useState("");
   const [kelas, setKelas] = useState("");
+  const [sekolah, setSekolah] = useState("");
 
   const router = useRouter();
   const { type } = useLocalSearchParams();
@@ -84,6 +85,15 @@ const Rename = () => {
                 style={styles.input}
               />
             </View>
+            <View style={{ width: "70%" }}>
+              <Text style={styles.nama}>Sekolah</Text>
+              <TextInput
+                value={sekolah}
+                onChangeText={setSekolah}
+                placeholder="tulis asal sekolah kamu"
+                style={styles.input}
+              />
+            </View>
           </View>
 
           <View
@@ -113,7 +123,7 @@ const Rename = () => {
                   resizeMode="contain"
                   style={{
                     width: 100,
-                    height: 30,
+                    height: 50,
                     // backgroundColor: "lime"
                   }}
                 />
@@ -123,14 +133,14 @@ const Rename = () => {
                   router.push({
                     pathname: "/soal/exercise/[id]",
                     params: {
-                      id: 1,
-                      type: type,
+                      id: type,
                     },
                   });
                   setUserData({
                     ...userData,
                     name: nama,
                     class: kelas,
+                    school: sekolah,
                   });
                 }}
               >
@@ -139,7 +149,7 @@ const Rename = () => {
                   resizeMode="contain"
                   style={{
                     width: 100,
-                    height: 30,
+                    height: 50,
                     //  backgroundColor: "lime"
                   }}
                 />

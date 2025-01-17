@@ -16,7 +16,7 @@ const Dospem = () => {
         style={{
           textAlign: "center",
           fontFamily: "PBold",
-          fontSize: 20,
+          fontSize: 17,
         }}
       >
         Dosen Pembimbing

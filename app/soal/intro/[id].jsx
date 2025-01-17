@@ -11,11 +11,22 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 
 const QuestionIntro = () => {
   const router = useRouter();
-  const { id, image, content } = useLocalSearchParams();
+  const { id, image } = useLocalSearchParams();
+
+  const contents = [
+    "Isilah data diri kalian pada kolom yang sudah disediakan.",
+    "Bacalah setiap soal dengan cermat sebelum memilih jawaban.",
+    "Klik pada pilihan jawaban yang Anda anggap paling tetap.",
+    "Pastikan setiap soal terjawab sebelum melanjutkan ke soal berikutnya.",
+    "Sebelum menekan tombol 'Yakin', periksa kembali jawaban Anda.",
+    "Klik tombol 'Yakin' setelah memastikan semua soal telah dijawab dengan benar.",
+  ];
+
   return (
     <View
       style={{
         flex: 1,
+        // backgroundColor: "pink",
       }}
     >
       <ImageBackground
@@ -49,7 +60,7 @@ const QuestionIntro = () => {
         <View
           style={{
             flex: 1,
-            marginHorizontal: 140,
+            marginHorizontal: 90,
             marginVertical: 50,
             justifyContent: "center",
             alignItems: "center",
@@ -68,15 +79,29 @@ const QuestionIntro = () => {
             }}
           />
           <ScrollView>
-            <Text
-              style={{
-                textAlign: "justify",
-                fontFamily: "PMedium",
-                fontSize: 12,
-              }}
-            >
-              {content}
-            </Text>
+            {contents.map((item, key) => (
+              <View key={key} style={{ display: "flex", flexDirection: "row" }}>
+                <Text
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: "PMedium",
+                    fontSize: 15,
+                    marginRight: 5,
+                  }}
+                >
+                  {key + 1}.
+                </Text>
+                <Text
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: "PMedium",
+                    fontSize: 15,
+                  }}
+                >
+                  {item}
+                </Text>
+              </View>
+            ))}
           </ScrollView>
         </View>
 
@@ -108,6 +133,7 @@ const QuestionIntro = () => {
                 style={{
                   width: 100,
                   height: 30,
+                  display: "none",
                   // backgroundColor: "lime"
                 }}
               />
@@ -127,7 +153,7 @@ const QuestionIntro = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
+                  height: 50,
                   //  backgroundColor: "lime"
                 }}
               />

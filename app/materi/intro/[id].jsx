@@ -130,7 +130,8 @@ const Intro = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
+                  height: 50,
+                  display: id == 1 ? (page > 1 ? "block" : "none") : "none",
                   // backgroundColor: "lime"
                 }}
               />
@@ -141,7 +142,8 @@ const Intro = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
+                  height: 50,
+                  display: id == 1 ? (page < 3 ? "block" : "none") : "none",
                   //  backgroundColor: "lime"
                 }}
               />
