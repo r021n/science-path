@@ -132,7 +132,10 @@ const Exercise = () => {
               <Image
                 source={data.gambar}
                 resizeMode="contain"
-                style={{ width: "100%", justifyContent: "center" }}
+                style={{
+                  width: "100%",
+                  justifyContent: "center",
+                }}
               />
             </View>
           ) : (
@@ -144,7 +147,7 @@ const Exercise = () => {
               fontFamily: "PMedium",
               fontSize: 14,
               textAlign: "justify",
-              marginTop: 15,
+              marginTop: 0,
             }}
           >
             {data.soal}

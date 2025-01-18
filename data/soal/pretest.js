@@ -36,10 +36,10 @@ export const pretest = [
     },
     {
         id: 6,
-        soal: 'Yang termasuk dampak dari pemanasan global ditunjukkan oleh nomor',
+        soal: '1)	Naiknya permukaan air laut \n2)	Terjadinya badai yang lebih sering dan intens \n3)	Suhu bumi menurun secara signifikan \n4)	Berkurangnya habitat untuk satwa liar \n5)	Bertambahnya area hutan tropis\n\nYang termasuk dampak dari pemanasan global ditunjukkan oleh nomor',
         pilihan: ['1, 2, dan 4', '2, 3, dan 5', '3, 4, dan 5', '1, 3, dan 5'],
         kunci: 0,
-        gambar: require('../../assets/question/pretest_6.png'),
+        gambar: null,
     },
     {
         id: 7,
@@ -54,10 +54,10 @@ export const pretest = [
     },
     {
         id: 8,
-        soal: 'Tindakan yang paling efektif untuk mengurangi emisi gas rumah kaca adalah',
+        soal: 'Perhatikan tindakan berikut!\n1)	 Menggunakan transportasi umum\n2)	 Menghemat penggunaan listrik\n3)	Menanam pohon di sekitar lingkungan\n4)	Mengelola sampah organik menjadi kompos\n5)	Berjalan kaki untuk perjalanan jarak dekat\n\nTindakan yang paling efektif untuk mengurangi emisi gas rumah kaca adalah',
         pilihan: ['1, 2, dan 5', '1, 3, dan 4', '2, 4, dan 5', '3, 4, dan 5'],
         kunci: 0,
-        gambar: require('../../assets/question/pretest_8.png'),
+        gambar: null,
     },
     {
         id: 9,
@@ -82,14 +82,14 @@ export const pretest = [
     },
     {
         id: 11,
-        soal: 'Dari pernyataan di atas, yang tidak termasuk ke dalam dampak dari fenomena pemanasan global adalah',
+        soal: 'Perhatikan uraian terkait dampak dari fenomena pemanasan global di bawah ini!\n\n1)   Suhu bumi semakin meningkat.\n2) Mencairnya es di kutub sehingga menyebabkan permukaan air laut meningkat.\n3)	Kenaikan populasi spesies hewan dan tumbuhan.\n4)	Lapisan ozon semakin menipis.\n\nDari pernyataan di atas, yang tidak termasuk ke dalam dampak dari fenomena pemanasan global adalah',
         pilihan: ['Suhu bumi semakin meningkat.',
             'Mencairnya es di kutub sehingga menyebabkan permukaan air laut meningkat.',
             'Kenaikan populasi spesies hewan dan tumbuhan.',
             'Lapisan ozon semakin menipis.'
         ],
         kunci: 2,
-        gambar: require('../../assets/question/pretest_11.png'),
+        gambar: null,
     },
     {
         id: 12,
@@ -177,9 +177,9 @@ export const pretest = [
     },
     {
         id: 20,
-        soal: 'Benda yang tidak menggunakan bahan CFC ada pada nomor',
+        soal: 'Perhatikan benda di bawah ini:\n1)   Pendingin ruangan\n2)   Lemari es\n3)   Oven listrik\n4)   Deodoran semprot\n5)   Laptop\n\nBenda yang tidak menggunakan bahan CFC ada pada nomor',
         pilihan: ['Lemari Es', 'Pendingin Ruangan', 'Oven Listrik', 'Deodoran Semprot'],
         kunci: 2,
-        gambar: require('../../assets/question/pretest_20.png'),
+        gambar: null,
     },
 ]

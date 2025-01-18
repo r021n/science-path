@@ -52,14 +52,14 @@ export const postest = [
     },
     {
         id: 6,
-        soal: 'Dampak dari pemanasan global ditunjukkan oleh nomor',
+        soal: 'Perhatikan beberapa peristiwa di bawah ini!\n1) Mencairnya es di kutub\n2) Terjadinya perubahan iklim\n3) Suhu lingkungan menjadi sejuk\n4) Berkurangnya flora dan fauna\n5) Banyaknya tumbuhan baru\n\nDampak dari pemanasan global ditunjukkan oleh nomor',
         pilihan: ['1,2 dan 4',
             '2, 3, dan 5',
             '2, 3, dan 4',
             '3, 4, dan 5',
         ],
         kunci: 0,
-        gambar: require('../../assets/question/postest_6.png'),
+        gambar: null,
     },
     {
         id: 7,
@@ -74,14 +74,14 @@ export const postest = [
     },
     {
         id: 8,
-        soal: 'Tindakan yang paling efektif untuk mengurangi emisi gas rumah kaca adalah',
+        soal: 'Perhatikan daftar aktivitas berikut ini yang dapat membantu mengurangi emisi gas rumah kaca:\n\n1)  Mematikan alat elektronik yang tidak digunakan\n2)	 Memanfaatkan sepeda sebagai sarana transportasi jarak dekat\n3)	Menanam tumbuhan hijau di pekarangan rumah\n4)	Mendaur ulang sampah plastik menjadi produk baru\n5)	Menggunakan kendaraan pribadi hanya untuk perjalanan jauh\n\nTindakan yang paling efektif untuk mengurangi emisi gas rumah kaca adalah',
         pilihan: ['1, 3, dan 4',
             '1, 2, dan 5',
             '2, 3, dan 4',
             '3, 4, dan 5',
         ],
         kunci: 2,
-        gambar: require('../../assets/question/postest_8.png'),
+        gambar: null,
     },
     {
         id: 9,
@@ -107,14 +107,14 @@ export const postest = [
     },
     {
         id: 11,
-        soal: 'Pernyataan yang tidak terkait dengan dampak pemanasan global adalah',
+        soal: 'Fenomena pemanasan global telah menyebabkan berbagai dampak berikut ini:\n\n1)	Peningkatan suhu rata-rata bumi.\n2)	Penurunan biodiversitas akibat perubahan ekosistem.\n3)Meningkatnya frekuensi badai tropis.\n4)Bertambahnya luas hutan hujan tropis secara signifikan.\n\nPernyataan yang tidak terkait dengan dampak pemanasan global adalah',
         pilihan: ['Peningkatan suhu rata-rata bumi.',
             'Penurunan biodiversitas akibat perubahan ekosistem.',
             'Meningkatnya frekuensi badai tropis.',
             'Bertambahnya luas hutan hujan tropis secara signifikan.',
         ],
         kunci: 3,
-        gambar: require('../../assets/question/postest_11.png'),
+        gambar: null,
     },
     {
         id: 12,
@@ -206,10 +206,10 @@ export const postest = [
     },
     {
         id: 20,
-        soal: 'Benda di atas yang tidak menggunakan bahan CFC ada pada nomor',
+        soal: 'Perhatikan benda di bawah ini !\n\n1)   Kulkas\n2)  AC\n3)	Televisi\n4)	Kompor listrik\n5)	Parfum\n\nBenda di atas yang tidak menggunakan bahan CFC ada pada nomor',
         pilihan: ['Kulkas', 'Televisi', 'Kompor Listrik', 'Parfum'
         ],
         kunci: 2,
-        gambar: require('../../assets/question/postest_20.png'),
+        gambar: null,
     },
 ]
