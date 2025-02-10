@@ -72,8 +72,8 @@ const Intro = () => {
             resizeMode="contain"
             style={{
               justifyContent: "center",
-              height: "100%",
-              width: "100%",
+              height: 360,
+              width: 680,
               // backgroundColor: "lime",
             }}
           >
@@ -83,8 +83,8 @@ const Intro = () => {
                 // flex: 1,
                 height: "10%",
                 // alignItems: "center",
-                paddingHorizontal: 35,
-                marginVertical: 110,
+                paddingHorizontal: 40,
+                marginVertical: 50,
               }}
             >
               <Text

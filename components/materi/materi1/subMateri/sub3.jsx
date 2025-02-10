@@ -44,9 +44,10 @@ const Sub3 = () => {
         source={require("../../../../assets/images/dampak.jpg")}
         resizeMode="contain"
         style={{
-          width: 380,
-          height: 250,
+          width: 550,
+          height: 370,
           marginTop: 10,
+          // backgroundColor: "yellow",
           marginHorizontal: "auto",
         }}
       />
