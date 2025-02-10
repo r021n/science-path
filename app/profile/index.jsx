@@ -35,7 +35,7 @@ const ProfilePengembang = () => {
         }}
       >
         <TouchableOpacity
-          onPress={() => router.back("/mainMenu/mainMenu")}
+          onPress={() => router.replace("/mainMenu/mainMenu")}
           style={{
             position: "absolute",
             left: 40,

@@ -7,13 +7,14 @@ import {
   Alert,
   BackHandler,
 } from "react-native";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/header";
 import MenuList from "../../components/menuList";
 import { useIsFocused } from "@react-navigation/native";
 
 const MainMenu = () => {
   const isFocused = useIsFocused();
+
   useEffect(() => {
     if (isFocused) {
       const backAction = () => {
