@@ -39,7 +39,7 @@ const Simulator = () => {
               justifyContent: "center",
             }}
           >
-            <Text
+            {/* <Text
               style={{
                 marginTop: -20,
                 fontFamily: "PBold",
@@ -49,7 +49,7 @@ const Simulator = () => {
               }}
             >
               Our Menu
-            </Text>
+            </Text> */}
             <View
               style={{
                 marginTop: 30,
@@ -70,6 +70,7 @@ const Simulator = () => {
                     // backgroundColor: "lime",
                   }}
                 />
+                <Text style={{ textAlign: 'center', color: 'white', fontFamily: "PBold", fontSize: 17, marginTop: 10 }}>Simulasi A</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => router.push("/simulator/carSimulator")}
@@ -83,6 +84,7 @@ const Simulator = () => {
                     // backgroundColor: "lime",
                   }}
                 />
+                <Text style={{ textAlign: 'center', color: 'white', fontFamily: "PBold", fontSize: 17, marginTop: 10 }}>Simulasi B</Text>
               </TouchableOpacity>
             </View>
           </View>
