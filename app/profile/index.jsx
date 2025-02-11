@@ -13,14 +13,6 @@ import Mahasiswa from "../../components/profile/mahasiswa";
 
 const ProfilePengembang = () => {
   const router = useRouter();
-  const [num, setNum] = useState(1);
-
-  const nextProfile = () => {
-    if (num < 2) setNum((num) => num + 1);
-  };
-  const prevProfile = () => {
-    if (num > 1) setNum((num) => num - 1);
-  };
   return (
     <View
       style={{
@@ -69,10 +61,10 @@ const ProfilePengembang = () => {
             resizeMode="contain"
             style={{
               // flex: 1,
-              width: 600,
+              width: 650,
               height: 300,
               justifyContent: "center",
-              // backgroundColor: "skyblue",
+              backgroundColor: "skyblue",
               alignSelf: "center",
             }}
           >
@@ -82,57 +74,9 @@ const ProfilePengembang = () => {
                 marginTop: 70,
               }}
             >
-              {num === 1 ? <Mahasiswa /> : <Dospem />}
+              <Mahasiswa />
             </ScrollView>
           </ImageBackground>
-        </View>
-
-        <View
-          style={{
-            position: "absolute",
-            display: "flex",
-            flexDirection: "row",
-            // backgroundColor: "yellow",
-            width: "100%",
-            justifyContent: "center",
-            bottom: 35,
-          }}
-        >
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              //   backgroundColor: "pink",
-              width: "100%",
-              paddingHorizontal: 30,
-            }}
-          >
-            <TouchableOpacity onPress={prevProfile}>
-              <Image
-                source={require("../../assets/icons/swipe_left.png")}
-                resizeMode="contain"
-                style={{
-                  width: 100,
-                  height: 50,
-                  display: num > 1 ? "block" : "none",
-                  // backgroundColor: "lime"
-                }}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={nextProfile}>
-              <Image
-                source={require("../../assets/icons/swipe_right.png")}
-                resizeMode="contain"
-                style={{
-                  width: 100,
-                  height: 50,
-                  display: num < 2 ? "block" : "none",
-                  //  backgroundColor: "lime"
-                }}
-              />
-            </TouchableOpacity>
-          </View>
         </View>
       </ImageBackground>
     </View>
