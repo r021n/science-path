@@ -8,7 +8,6 @@ import {
 import React from "react";
 import Header from "../../components/header";
 import { useRouter } from "expo-router";
-import Materi1 from "../../components/materi/materi1/materi1";
 
 const Materi = () => {
   const router = useRouter();

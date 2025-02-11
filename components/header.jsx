@@ -133,7 +133,12 @@ const Header = () => {
         }}
       >
         <View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setDropDownBar(false);
+              router.push("/userGuide");
+            }}
+          >
             <Text style={styles.textDrop}>Petunjuk Penggunaan</Text>
           </TouchableOpacity>
         </View>
