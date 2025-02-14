@@ -64,7 +64,7 @@ const ProfilePengembang = () => {
               width: 650,
               height: 300,
               justifyContent: "center",
-              backgroundColor: "skyblue",
+              // backgroundColor: "skyblue",
               alignSelf: "center",
             }}
           >
