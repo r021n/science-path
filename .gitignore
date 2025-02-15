@@ -37,4 +37,3 @@ yarn-error.*
 *.tsbuildinfo
 
 # ignored files
-app/modal.jsx
