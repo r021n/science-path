@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-navigation/native": "^7.0.0",
-    "expo": "^52.0.33",
+    "expo": "^52.0.35",
     "expo-av": "~15.0.2",
     "expo-constants": "~17.0.3",
     "expo-font": "~13.0.1",
@@ -18,7 +18,7 @@
     "expo-navigation-bar": "~4.0.8",
     "expo-router": "~4.0.17",
     "expo-screen-orientation": "~8.0.4",
-    "expo-splash-screen": "~0.29.21",
+    "expo-splash-screen": "~0.29.22",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
     "react-native": "0.76.7",
