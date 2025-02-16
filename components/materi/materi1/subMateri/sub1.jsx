@@ -36,8 +36,9 @@ const Sub1 = () => {
         source={require("../../../../assets/images/proses_pemanasan.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 290,
+          width: 535,
+          height: 260,
+          // flex: 1,
           justifyContent: "center",
           // backgroundColor: "yellow",
           marginBottom: 10,
