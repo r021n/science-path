@@ -61,7 +61,7 @@ const ProfilePengembang = () => {
             resizeMode="contain"
             style={{
               // flex: 1,
-              width: 650,
+              width: 570,
               height: 300,
               justifyContent: "center",
               // backgroundColor: "skyblue",

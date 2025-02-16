@@ -19,6 +19,7 @@ const Mahasiswa = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: 20,
+          marginTop: 9,
         }}
       >
         <Image
@@ -44,7 +45,7 @@ const Mahasiswa = () => {
           >{`S2 Teknologi Pendidikan FKIP UNS`}</Text>
         </View>
       </View>
-      <View style={{ marginTop: 15 }}>
+      <View>
         <Text
           style={{
             fontFamily: "PMedium",
