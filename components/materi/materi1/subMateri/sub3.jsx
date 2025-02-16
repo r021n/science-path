@@ -44,11 +44,12 @@ const Sub3 = () => {
         source={require("../../../../assets/images/dampak.jpg")}
         resizeMode="contain"
         style={{
-          width: 550,
-          height: 370,
+          width: "100%",
+          height: 280,
           marginTop: 10,
           // backgroundColor: "yellow",
           marginHorizontal: "auto",
+          alignSelf: "flex-start",
         }}
       />
       <View style={{ marginTop: 10, paddingLeft: 10 }}>

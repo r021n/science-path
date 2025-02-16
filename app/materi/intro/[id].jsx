@@ -85,7 +85,7 @@ const Intro = () => {
                 height: "10%",
                 // alignItems: "center",
                 paddingHorizontal: 40,
-                marginVertical: 75,
+                marginVertical: 90,
               }}
             >
               <Text
