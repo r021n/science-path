@@ -225,21 +225,25 @@ const Exercise = () => {
               // backgroundColor: "pink",
               width: "100%",
               paddingHorizontal: 30,
-              gap: 400,
+              gap: "75%",
             }}
           >
-            <TouchableOpacity onPress={previous}>
-              <Image
-                source={require("../../../assets/icons/swipe_left.png")}
-                resizeMode="contain"
-                style={{
-                  width: 100,
-                  height: 50,
-                  display: currentNum >= 2 ? "block" : "none",
-                  // backgroundColor: "lime"
-                }}
-              />
-            </TouchableOpacity>
+            {currentNum < 2 ? (
+              <View style={{ width: 100, height: 50 }}></View>
+            ) : (
+              <TouchableOpacity onPress={previous}>
+                <Image
+                  source={require("../../../assets/icons/swipe_left.png")}
+                  resizeMode="contain"
+                  style={{
+                    width: 100,
+                    height: 50,
+                    display: currentNum >= 2 ? "block" : "none",
+                    // backgroundColor: "lime",
+                  }}
+                />
+              </TouchableOpacity>
+            )}
 
             {currentNum < pretest.length ? (
               <TouchableOpacity onPress={continou}>
