@@ -19,9 +19,9 @@ const Guide3 = () => {
         source={require("../../assets/images/simulator_A_1.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 300,
-          //   backgroundColor: "yellow",
+          width: 550,
+          height: 270,
+          // backgroundColor: "yellow",
           alignSelf: "center",
         }}
       />
@@ -34,8 +34,8 @@ const Guide3 = () => {
         source={require("../../assets/images/simulator_A_2.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 300,
+          width: 550,
+          height: 270,
           //   backgroundColor: "yellow",
           alignSelf: "center",
         }}
@@ -48,8 +48,8 @@ const Guide3 = () => {
         source={require("../../assets/images/simulator_A_3.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 300,
+          width: 550,
+          height: 270,
           //   backgroundColor: "yellow",
           alignSelf: "center",
         }}

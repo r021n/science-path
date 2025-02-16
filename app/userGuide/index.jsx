@@ -58,8 +58,8 @@ const UserGuide = () => {
           justifyContent: "center",
         }}
       >
-        <ScrollView style={{ marginVertical: 25, marginHorizontal: "15%" }}>
-          <View style={{ alignItems: "center" }}>
+        <ScrollView style={{ marginVertical: 25, marginHorizontal: "14%" }}>
+          <View style={{ alignItems: "center", marginHorizontal: "10%" }}>
             <CurrentGuide />
           </View>
         </ScrollView>

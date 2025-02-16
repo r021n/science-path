@@ -34,11 +34,11 @@ const Guide2 = () => {
         source={require("../../assets/images/guide_2.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 350,
+          width: 550,
+          height: 320,
           //   backgroundColor: "yellow",
           marginVertical: 10,
-          alignSelf: "center",
+          // alignSelf: "center",
         }}
       />
     </View>

@@ -42,11 +42,11 @@ const Guide1 = () => {
         source={require("../../assets/images/guide_1.png")}
         resizeMode="contain"
         style={{
-          width: 600,
-          height: 350,
-          //   backgroundColor: "yellow",
+          width: 550,
+          height: 320,
+          // backgroundColor: "yellow",
           marginVertical: 10,
-          alignSelf: "center",
+          // alignSelf: "center",
         }}
       />
       {guideList.map((item, index) => (
