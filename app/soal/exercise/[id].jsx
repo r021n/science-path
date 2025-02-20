@@ -6,6 +6,7 @@ import {
   ImageBackground,
   ScrollView,
   ToastAndroid,
+  Dimensions,
 } from "react-native";
 import { useEffect, useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -16,9 +17,12 @@ import { useForm } from "../../../context/answerContext";
 
 const Exercise = () => {
   const router = useRouter();
+  const windowWidth = Dimensions.get("window").width;
+  const imageWidth = windowWidth - 280;
 
   const { id } = useLocalSearchParams();
   const [currentNum, setCurrentNum] = useState(1);
+  const [imageHeight, setImageHeight] = useState(0);
 
   const data =
     id === "pretest" ? pretest[currentNum - 1] : postest[currentNum - 1];
@@ -128,13 +132,27 @@ const Exercise = () => {
           }}
         >
           {data.gambar ? (
-            <View style={{ flex: 1 }}>
+            <View
+              style={{
+                width: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                // marginVertical: 10,
+              }}
+            >
               <Image
                 source={data.gambar}
                 resizeMode="contain"
+                onLoad={(event) => {
+                  const { width, height } = event.nativeEvent.source;
+                  const ratio = height / width;
+                  setImageHeight(imageWidth * ratio);
+                }}
                 style={{
-                  width: "100%",
-                  justifyContent: "center",
+                  width: imageWidth,
+                  height: imageHeight,
+                  alignSelf: "center",
                 }}
               />
             </View>

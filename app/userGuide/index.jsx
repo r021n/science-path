@@ -34,7 +34,7 @@ const UserGuide = () => {
         onPress={() => router.replace("/mainMenu/mainMenu")}
         style={{
           position: "absolute",
-          left: 40,
+          left: "3%",
           top: 30,
           zIndex: 1,
         }}
@@ -58,8 +58,8 @@ const UserGuide = () => {
           justifyContent: "center",
         }}
       >
-        <ScrollView style={{ marginVertical: 25, marginHorizontal: "14%" }}>
-          <View style={{ alignItems: "center", marginHorizontal: "10%" }}>
+        <ScrollView style={{ marginVertical: 25, paddingHorizontal: "15%" }}>
+          <View style={{ alignItems: "center" }}>
             <CurrentGuide />
           </View>
         </ScrollView>
@@ -79,36 +79,46 @@ const UserGuide = () => {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
-            //   backgroundColor: "pink",
+            justifyContent: "center",
+            // backgroundColor: "pink",
             width: "100%",
             paddingHorizontal: 30,
+            gap: "80%",
           }}
         >
-          <TouchableOpacity onPress={prevPage}>
-            <Image
-              source={require("../../assets/icons/swipe_left.png")}
-              resizeMode="contain"
-              style={{
-                width: 100,
-                height: 50,
-                display: page > 1 ? "block" : "none",
-                // backgroundColor: "lime"
-              }}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={nextPage}>
-            <Image
-              source={require("../../assets/icons/swipe_right.png")}
-              resizeMode="contain"
-              style={{
-                width: 100,
-                height: 50,
-                display: page < 4 ? "block" : "none",
-                //  backgroundColor: "lime"
-              }}
-            />
-          </TouchableOpacity>
+          {page < 2 ? (
+            <View style={{ width: 100, height: 50 }}></View>
+          ) : (
+            <TouchableOpacity onPress={prevPage}>
+              <Image
+                source={require("../../assets/icons/swipe_left.png")}
+                resizeMode="contain"
+                style={{
+                  width: 100,
+                  height: 50,
+                  display: page > 1 ? "block" : "none",
+                  // backgroundColor: "lime"
+                }}
+              />
+            </TouchableOpacity>
+          )}
+
+          {page > 3 ? (
+            <View style={{ width: 100, height: 50 }}></View>
+          ) : (
+            <TouchableOpacity onPress={nextPage}>
+              <Image
+                source={require("../../assets/icons/swipe_right.png")}
+                resizeMode="contain"
+                style={{
+                  width: 100,
+                  height: 50,
+                  display: page < 4 ? "block" : "none",
+                  //  backgroundColor: "lime"
+                }}
+              />
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     </View>
