@@ -27,6 +27,26 @@ const Simulator = () => {
         style={{ flex: 1, justifyContent: "center" }}
       >
         <Header />
+        <TouchableOpacity
+          onPress={() => router.back("/mainMenu/mainMenu")}
+          style={{
+            position: "absolute",
+            left: 40,
+            top: 75,
+            // backgroundColor: "yellow",
+          }}
+        >
+          <View>
+            <Image
+              source={require("../../assets/icons/home_icon.png")}
+              resizeMode="contain"
+              style={{
+                width: 50,
+                height: 50,
+              }}
+            />
+          </View>
+        </TouchableOpacity>
         <View
           style={{
             flex: 1,
@@ -70,7 +90,17 @@ const Simulator = () => {
                     // backgroundColor: "lime",
                   }}
                 />
-                <Text style={{ textAlign: 'center', color: 'white', fontFamily: "PBold", fontSize: 17, marginTop: 10 }}>Simulasi A</Text>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    color: "white",
+                    fontFamily: "PBold",
+                    fontSize: 17,
+                    marginTop: 10,
+                  }}
+                >
+                  Simulasi A
+                </Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => router.push("/simulator/carSimulator")}
@@ -84,7 +114,17 @@ const Simulator = () => {
                     // backgroundColor: "lime",
                   }}
                 />
-                <Text style={{ textAlign: 'center', color: 'white', fontFamily: "PBold", fontSize: 17, marginTop: 10 }}>Simulasi B</Text>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    color: "white",
+                    fontFamily: "PBold",
+                    fontSize: 17,
+                    marginTop: 10,
+                  }}
+                >
+                  Simulasi B
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
