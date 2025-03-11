@@ -16,7 +16,7 @@ const TextList = ({ text, tujuan = false }) => {
       <Text
         style={{
           //   backgroundColor: "pink",
-          width: "20%",
+          width: "22%",
           fontFamily: "PSemi",
           fontSize: 13,
         }}
@@ -35,7 +35,7 @@ const TextList = ({ text, tujuan = false }) => {
       </Text>
       {tujuan ? (
         <View
-          style={{ display: "flex", flexDirection: "column", width: "75%" }}
+          style={{ display: "flex", flexDirection: "column", width: "73%" }}
         >
           {data.map((item, index) => (
             <View style={{ display: "flex", flexDirection: "row" }} key={index}>
