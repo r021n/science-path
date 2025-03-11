@@ -22,8 +22,9 @@ const begin = () => {
           source={require("../../assets/images/logo.png")}
           resizeMode="contain"
           style={{
-            height: 30,
-            width: 120,
+            height: 90,
+            width: 390,
+            position: "absolute",
           }}
         />
       </View>
@@ -57,13 +58,12 @@ const begin = () => {
           >
             <Text
               style={{
-                fontFamily: "PBlack",
-                fontSize: 40,
                 // marginRight: 400,
-                lineHeight: 43,
+                fontFamily: "PSemi",
+                textAlign: "justify",
               }}
             >
-              PEMANASAN GLOBAL
+              Selamat datang di SciencePath!
             </Text>
             <Text
               style={{
@@ -72,9 +72,8 @@ const begin = () => {
                 textAlign: "justify",
               }}
             >
-              Selamat datang di Aplikasi Simulator Pemanasan Global! Aplikasi
-              ini dirancang untuk memberikan pemahaman mendalam tentang dampak
-              perubahan iklim dan pemanasan global melalui simulasi interaktif
+              Aplikasi ini dirancang untuk memberikan pemahaman mendalam tentang
+              proses terjadinya pemanasan global melalui simulator{" "}
             </Text>
             <TouchableOpacity
               onPress={() => router.replace("/mainMenu/mainMenu")}
@@ -94,7 +93,7 @@ const begin = () => {
                   color: "white",
                 }}
               >
-                Mulai
+                Start
               </Text>
             </TouchableOpacity>
           </View>
@@ -118,6 +117,14 @@ const begin = () => {
           </View>
         </View>
       </View>
+      <Image
+        source={require("../../assets/images/blue_area.png")}
+        resizeMode="cover"
+        style={{
+          position: "absolute",
+          bottom: -150,
+        }}
+      />
     </View>
   );
 };
