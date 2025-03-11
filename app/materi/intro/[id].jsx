@@ -18,7 +18,11 @@ const Intro = () => {
   const [page, setPage] = useState(1);
 
   const prevPage = () => {
-    if (page > 1) setPage((page) => page - 1);
+    if (page > 1) {
+      setPage((page) => page - 1);
+    } else {
+      router.back();
+    }
   };
 
   const nextPage = () => {
@@ -132,7 +136,7 @@ const Intro = () => {
                 style={{
                   width: 100,
                   height: 50,
-                  display: id == 1 ? (page > 1 ? "block" : "none") : "none",
+                  // display: id == 1 ? (page > 1 ? "block" : "none") : "none",
                   // backgroundColor: "lime"
                 }}
               />
