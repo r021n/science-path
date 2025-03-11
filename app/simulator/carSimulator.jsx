@@ -1,11 +1,15 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
-import WebView from "react-native-webview";
 import { useNavigation } from "expo-router";
-import Header from "../../components/header";
+import CarLab from "../../components/simulator/carSimulator/carLab";
+import CarIntro from "../../components/simulator/carSimulator/carIntro";
 
 const CarSimulator = () => {
   const navigation = useNavigation();
+  const [page, setPage] = React.useState(0);
+
+  const listShow = [CarIntro, CarLab];
+  const ShowLab = listShow[page];
 
   React.useEffect(() => {
     navigation.setOptions({
@@ -18,17 +22,7 @@ const CarSimulator = () => {
         flex: 1,
       }}
     >
-      <View>
-        <Header />
-      </View>
-      <WebView
-        style={{
-          flex: 1,
-        }}
-        source={{
-          uri: "https://scratch.mit.edu/projects/1112629281",
-        }}
-      />
+      <ShowLab setPage={setPage} />
     </View>
   );
 };

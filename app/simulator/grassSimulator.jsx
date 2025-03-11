@@ -1,11 +1,15 @@
 import { View, Text } from "react-native";
 import React from "react";
-import WebView from "react-native-webview";
 import { useNavigation } from "expo-router";
-import Header from "../../components/header";
+import GrassLab from "../../components/simulator/grassSimulator/grassLab";
+import GrassIntro from "../../components/simulator/grassSimulator/grassIntro";
 
 const GrassSimulator = () => {
   const navigation = useNavigation();
+  const [page, setPage] = React.useState(0);
+
+  const listShow = [GrassIntro, GrassLab];
+  const ShowLab = listShow[page];
 
   React.useEffect(() => {
     navigation.setOptions({
@@ -18,17 +22,7 @@ const GrassSimulator = () => {
         flex: 1,
       }}
     >
-      <View>
-        <Header />
-      </View>
-      <WebView
-        style={{
-          flex: 1,
-        }}
-        source={{
-          uri: "https://scratch.mit.edu/projects/1112645660",
-        }}
-      />
+      <ShowLab setPage={setPage} />
     </View>
   );
 };
