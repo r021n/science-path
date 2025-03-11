@@ -132,8 +132,8 @@ const QuestionIntro = () => {
                 resizeMode="contain"
                 style={{
                   width: 100,
-                  height: 30,
-                  display: "none",
+                  height: 50,
+                  // display: "none",
                   // backgroundColor: "lime"
                 }}
               />
