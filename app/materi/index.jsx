@@ -18,6 +18,25 @@ const Materi = () => {
         resizeMode="cover"
         style={{ flex: 1, justifyContent: "center" }}
       >
+        <TouchableOpacity
+          onPress={() => router.back("/mainMenu/mainMenu")}
+          style={{
+            position: "absolute",
+            left: 40,
+            top: 75,
+          }}
+        >
+          <View>
+            <Image
+              source={require("../../assets/icons/home_icon.png")}
+              resizeMode="contain"
+              style={{
+                width: 50,
+                height: 50,
+              }}
+            />
+          </View>
+        </TouchableOpacity>
         <View style={{ flex: 1 }}>
           <Header />
           <View
