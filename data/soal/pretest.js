@@ -173,8 +173,8 @@ export const pretest = [
     id: 16,
     soal: "Meningkatnya jumlah kendaraan bermotor mengakibatkan naiknya suhu udara di daerah perkotaan yang dapat mengganggu proses pernafasan makhluk hidup.Gas buangan dari kendaraan tersebut bersifat sebagai gas rumah kaca dan racun bagi tubuh. Salah satu altrenatif untuk mengatasi masalah tersebut yang paling tepat adalah",
     pilihan: [
-      "Membuat saringan CO2 ditempat-tempat tertentu",
-      "Membuat alat deteksi CO2 pada kendaraan bermotor",
+      "Membuat saringan CO₂ ditempat-tempat tertentu",
+      "Membuat alat deteksi CO₂ pada kendaraan bermotor",
       "Memberi penyuluhan tentang kesehatan lingkungan",
       "Menggalakkan kegiatan penghijauan di kota besar",
     ],
