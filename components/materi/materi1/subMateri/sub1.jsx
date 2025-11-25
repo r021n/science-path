@@ -114,7 +114,7 @@ const Sub1 = () => {
         <Text style={styles.textStyle}>
           Sumber gas rumah kaca yang berkumpul di atmosfer berasal dari
           aktifitas kita sehari-hari, dari menggunakan kendaraan bermotor, AC,
-          lemari pendingin. Sedangkan gas yang diserap oleh tumbuhan hanya CO2.
+          lemari pendingin. Sedangkan gas yang diserap oleh tumbuhan hanya CO₂.
         </Text>
       </View>
     </GestureHandlerRootView>

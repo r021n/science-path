@@ -104,7 +104,7 @@ const Guide4 = () => {
             style={{ width: 25, height: 25 }}
           />
           <Text style={styles.textStyle}>
-            {"\t:\tGas Rumah Kaca yang dihasilkan kendaraan bermotor (CO2)"}
+            {"\t:\tGas Rumah Kaca yang dihasilkan kendaraan bermotor (CO₂)"}
           </Text>
         </View>
       </View>

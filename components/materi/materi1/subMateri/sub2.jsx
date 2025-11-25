@@ -13,7 +13,7 @@ const Sub2 = () => {
       id: "b.",
       title: "Meningkatnya Gas Rumah Kaca (GRK)",
       content:
-        "Gas yang mempunyai sifat yang merangkap panas, sehingga panas yang terpantul oleh permukaan bumi tidak dapat diteruskan ke luar angkasa. Gas tersebut adalah gas rumah kaca, Gas yang paling berperan dan berpengaruh adalah gas karbondioksida (CO2). Penyebab meningkatnya gas ini adalah dikarenakan pembakaran bahan bakar batu bara, pembakaran minyak bumi, dan pembakaran gas alam.",
+        "Gas yang mempunyai sifat yang merangkap panas, sehingga panas yang terpantul oleh permukaan bumi tidak dapat diteruskan ke luar angkasa. Gas tersebut adalah gas rumah kaca, Gas yang paling berperan dan berpengaruh adalah gas karbondioksida (CO₂). Penyebab meningkatnya gas ini adalah dikarenakan pembakaran bahan bakar batu bara, pembakaran minyak bumi, dan pembakaran gas alam.",
     },
     {
       id: "c.",
@@ -25,7 +25,7 @@ const Sub2 = () => {
       id: "d.",
       title: "Polusi Kendaraan",
       content:
-        "Polusi yang dihasilkan oleh kendaraan yang menggunakan bahan bakar bensin ini seperti motor, mobil, dan kendaraan yang lainnya dimana dari hasil pembakaran tersebut akan menghasilkan gas yang bernama karbondioksida (CO2). Gas karbondioksida ini merupakan salah satu penyebab utama karena gas ini merupakan gas yang merangkap panas sehingga panas tidak bisa diteruskan ke luar angkasa.",
+        "Polusi yang dihasilkan oleh kendaraan yang menggunakan bahan bakar bensin ini seperti motor, mobil, dan kendaraan yang lainnya dimana dari hasil pembakaran tersebut akan menghasilkan gas yang bernama karbondioksida (CO₂). Gas karbondioksida ini merupakan salah satu penyebab utama karena gas ini merupakan gas yang merangkap panas sehingga panas tidak bisa diteruskan ke luar angkasa.",
     },
     {
       id: "e.",
@@ -37,7 +37,7 @@ const Sub2 = () => {
       id: "f.",
       title: "Pengundulan Hutan",
       content:
-        "Hutan sanagt mempunyai fungsi sebagai penyerap karbondioksida (CO2) dan mengeluarkan oksigen. Jika hutan rusak akibat dari penebangan liar yang tidak bertanggung jawab, maka akan terjadilah peningkatan jumlah karbondioksida di atmosfer bumi. Hal inilah yang menyebabkan terjadinya pemanasan global.",
+        "Hutan sanagt mempunyai fungsi sebagai penyerap karbondioksida (CO₂) dan mengeluarkan oksigen. Jika hutan rusak akibat dari penebangan liar yang tidak bertanggung jawab, maka akan terjadilah peningkatan jumlah karbondioksida di atmosfer bumi. Hal inilah yang menyebabkan terjadinya pemanasan global.",
     },
     {
       id: "g.",
