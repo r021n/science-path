@@ -53,7 +53,7 @@ const Modal = () => {
       }
     }
 
-    score = (totalSame / keyAnswerData.length) * 100;
+    score = parseInt((totalSame / keyAnswerData.length) * 100);
 
     // ==============> Store data to spreedsheet
 
