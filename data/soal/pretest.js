@@ -1,53 +1,5 @@
 export const pretest = [
   {
-    id: 1,
-    soal: "Efek rumah kaca terjadi akibat peningkatan gas-gas tertentu di atmosfer yang memerangkap panas matahari. Salah satu pola penyebab utama pemanasan global yang berkaitan dengan aktivitas manusia adalah...",
-    pilihan: [
-      "Deforestasi meningkatkan kadar oksigen.",
-      "Pembangunan industri mengurangi gas rumah kaca.",
-      "Kendaraan listrik meningkatkan karbon dioksida di atmosfer.",
-      "Penggunaan bahan bakar fosil meningkatkan karbon dioksida di atmosfer.",
-    ],
-    kunci: 3,
-    gambar: null,
-  },
-  {
-    id: 2,
-    soal: "Pemanasan global berdampak pada berbagai sektor kehidupan,tidak terkecuali pada bidang ekologi. Salah satu contoh dampak pemanasan global di bidang ekologi adalah…",
-    pilihan: [
-      "Perubahan pola cuaca",
-      "Penipisan lapisan ozon",
-      "Mencairnya es dan gletser",
-      "Perubahan habitat beruang laut",
-    ],
-    kunci: 3,
-    gambar: null,
-  },
-  {
-    id: 3,
-    soal: "Berbagai aktivitas manusia dapat menghasilkan gas rumah kaca yang berkontribusi terhadap pemanasan global. Aktivitas berikut yang tidak menghasilkan gas rumah kaca adalah…",
-    pilihan: [
-      "Pembakaran bahan bakar fosil",
-      "Penggunaan kendaraan bermotor",
-      "Pengelolaan hutan berkelanjutan",
-      "Penggunaan pendingin industri",
-    ],
-    kunci: 2,
-    gambar: null,
-  },
-  {
-    id: 4,
-    soal: "Pemanasan global menyebabkan perubahan iklim yang berdampak pada sektor pertanian di berbagai wilayah. Salah satu dampak utama yang dialami sektor pertanian akibat pemanasan global adalah…",
-    pilihan: [
-      "Pola tanam menjadi lebih stabil karena suhu yang lebih hangat sepanjang tahun",
-      "Risiko gagal panen meningkat karena perubahan pola hujan dan serangan hama",
-      "Meningkatnya ketersediaan air untuk irigasi di wilayah kering",
-      "Produksi pangan meningkat karena musim tanam yang lebih panjang",
-    ],
-    kunci: 1,
-    gambar: null,
-  },
-  {
     id: 5,
     soal: "Pemanasan global menyebabkan berbagai perubahan dalam ekosistem. Berikut ini yang tidak termasuk dampak pemanasan global terhadap ekosistem adalah…",
     pilihan: [
@@ -134,18 +86,6 @@ export const pretest = [
     gambar: require("../../assets/question/pretest_12.png"),
   },
   {
-    id: 13,
-    soal: "Efek rumah kaca dapat berdampak pada pemanasan global. Salah satu usaha yang dapat dilakukan untuk mengurangi terjadinya efek rumah kaca adalah",
-    pilihan: [
-      "Membatasi penggunaan kompos",
-      "Meningkatkan pembangunan pabrik",
-      "Membatasi pemakaian bahan bakar fosil",
-      "Meningkatkan produksi sepeda motor",
-    ],
-    kunci: 2,
-    gambar: null,
-  },
-  {
     id: 14,
     soal: "Berdasarkan pola yang terlihat dalam data tersebut, hubungan antara suhu rata-rata bulanan Indonesia dan kadar karbon dioksida dapat disimpulkan sebagai berikut…",
     pilihan: [
@@ -215,18 +155,6 @@ export const pretest = [
       "Membantu siswa menghemat uang untuk transportasi sehari-hari",
     ],
     kunci: 1,
-    gambar: null,
-  },
-  {
-    id: 20,
-    soal: "Beberapa benda berikut ini diindikasikan mengandung CFC dalam penggunaannya. Benda yang tidak menggunakan bahan CFC adalah…",
-    pilihan: [
-      "Lemari Es",
-      "Pendingin Ruangan",
-      "Oven Listrik",
-      "Deodoran Semprot",
-    ],
-    kunci: 2,
     gambar: null,
   },
 ];
