@@ -58,7 +58,8 @@ const Modal = () => {
     // ==============> Store data to spreedsheet
 
     const postestScript = "";
-    const pretestScript = "";
+    const pretestScript =
+      "https://script.google.com/macros/s/AKfycbymyczKMY5GnP1Jazbov82pngwJzXcp-gq7-GN1YVtBg-mbjyoC8CFxAA6v3AoXBgDU/exec";
 
     const url = type == "pretest" ? pretestScript : postestScript;
     fetch(url, {
@@ -78,6 +79,7 @@ const Modal = () => {
         router.push({
           pathname: "/result",
           params: {
+            type,
             studentScore: score,
             totalTrue: totalSame,
           },

@@ -10,11 +10,20 @@ import { useLocalSearchParams } from "expo-router";
 import { useRouter } from "expo-router";
 
 const Result = () => {
-  const { studentScore, totalTrue } = useLocalSearchParams();
+  const { studentScore, totalTrue, type } = useLocalSearchParams();
   const router = useRouter();
 
   function onBackPress() {
     router.dismissTo("/mainMenu/mainMenu");
+  }
+
+  function toExplanation() {
+    router.push({
+      pathname: "/explanation",
+      params: {
+        type,
+      },
+    });
   }
 
   return (
@@ -45,6 +54,20 @@ const Result = () => {
         >
           <Text style={{ color: "white", fontFamily: "PSemi", fontSize: 17 }}>
             Kembali ke Menu
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: "black",
+            paddingHorizontal: 25,
+            paddingVertical: 10,
+            borderRadius: 30,
+            marginTop: 30,
+          }}
+          onPress={toExplanation}
+        >
+          <Text style={{ color: "white", fontFamily: "PSemi", fontSize: 17 }}>
+            Lihat Pembahasan
           </Text>
         </TouchableOpacity>
       </ImageBackground>

@@ -67,12 +67,6 @@ const Exercise = () => {
     });
   };
 
-  // const pushUserAnswer = (answer) => {
-  //   const updateAnswer = [...userAnswers];
-  //   updateAnswer[currentNum - 1] = answer;
-  //   setUserAnswers(updateAnswer);
-  // };
-
   const previous = () => {
     setCurrentNum((currentNum) => currentNum - 1);
   };
