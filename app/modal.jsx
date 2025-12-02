@@ -57,7 +57,8 @@ const Modal = () => {
 
     // ==============> Store data to spreedsheet
 
-    const postestScript = "";
+    const postestScript =
+      "https://script.google.com/macros/s/AKfycbw5n1Dar7LtbfzsroHiuYuTnP0icTKBiGKMf3I8n8k30tbOBxRY2nsFYn2m5MKkugMb/exec";
     const pretestScript =
       "https://script.google.com/macros/s/AKfycbymyczKMY5GnP1Jazbov82pngwJzXcp-gq7-GN1YVtBg-mbjyoC8CFxAA6v3AoXBgDU/exec";
 
