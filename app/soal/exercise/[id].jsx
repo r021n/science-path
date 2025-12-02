@@ -120,8 +120,6 @@ const Exercise = () => {
             marginHorizontal: 140,
             marginTop: 40,
             marginBottom: 70,
-            // paddingBottom: 10,
-            // backgroundColor: "pink",
             gap: 18,
           }}
         >
@@ -168,8 +166,6 @@ const Exercise = () => {
             style={{
               marginTop: 16,
               paddingBottom: 30,
-              // backgroundColor: "lime",
-              // alignItems: "center",
             }}
           >
             {choice.map((item, key) => (
