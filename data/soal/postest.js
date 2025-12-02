@@ -9,6 +9,8 @@ export const postest = [
       "Terganggunya pola interaksi antar makhluk hidup",
     ],
     kunci: 2,
+    pembahasan:
+      "Pemanasan global justru mengganggu interaksi makhluk hidup dan menyebabkan ketidakseimbangan dalam rantai makanan dan habitat.",
     gambar: null,
   },
   {
@@ -16,6 +18,8 @@ export const postest = [
     soal: "Pemanasan global menyebabkan berbagai perubahan lingkungan yang berdampak luas terhadap ekosistem dan kehidupan manusia. Beberapa fenomena yang terjadi meliputi:\n1) Mencairnya es di kutub\n2) Terjadinya perubahan iklim\n3) Suhu lingkungan menjadi sejuk\n4) Berkurangnya flora dan fauna\n5) Banyaknya tumbuhan baru\n\nYang termasuk dampak dari pemanasan global ditunjukkan oleh nomor....",
     pilihan: ["1,2 dan 4", "2, 3, dan 5", "2, 3, dan 4", "3, 4, dan 5"],
     kunci: 0,
+    pembahasan:
+      "Mencairnya es, perubahan iklim, dan berkurangnya flora-fauna adalah dampak yang terbukti berkaitan langsung dengan pemanasan global.",
     gambar: null,
   },
   {
@@ -28,6 +32,8 @@ export const postest = [
       "Ketiga fenomena tersebut tidak berkaitan dengan pemanasan global karena gas rumah kaca hanya dihasilkan oleh aktivitas transportasi dan sektor energi.",
     ],
     kunci: 0,
+    pembahasan:
+      "Ketiga fenomena ini sama-sama meningkatkan gas rumah kaca sehingga mempercepat pemanasan global.",
     gambar: require("../../assets/question/postest_7.png"),
   },
   {
@@ -35,6 +41,8 @@ export const postest = [
     soal: "Perhatikan daftar aktivitas berikut ini yang dapat membantu mengurangi emisi gas rumah kaca:\n\n1)  Mematikan alat elektronik yang tidak digunakan\n2)	 Memanfaatkan sepeda sebagai sarana transportasi jarak dekat\n3)	Menanam tumbuhan hijau di pekarangan rumah\n4)	Mendaur ulang sampah plastik menjadi produk baru\n5)	Menggunakan kendaraan pribadi hanya untuk perjalanan jauh\n\nTindakan yang paling efektif untuk mengurangi emisi gas rumah kaca adalah...",
     pilihan: ["1, 3, dan 4", "1, 2, dan 5", "2, 3, dan 4", "3, 4, dan 5"],
     kunci: 2,
+    pembahasan:
+      "Menggunakan sepeda, menanam tanaman hijau, dan mendaur ulang plastik merupakan aktivitas yang langsung menurunkan emisi gas dan meningkatkan kualitas lingkungan.",
     gambar: null,
   },
   {
@@ -47,6 +55,8 @@ export const postest = [
       "Pemanasan global mempercepat rotasi bumi, yang mengakibatkan pergeseran es di kutub dan mempercepat pencairannya.",
     ],
     kunci: 0,
+    pembahasan:
+      "Suhu bumi yang meningkat menyebabkan es di kutub kehilangan massa dan meningkatkan volume air laut.",
     gambar: require("../../assets/question/postest_9.png"),
   },
   {
@@ -59,6 +69,8 @@ export const postest = [
       "Penggunaan bahan bakar fosil dalam transportasi berdampak pada polusi udara, tidak secara langsung pada pemanasan global.",
     ],
     kunci: 0,
+    pembahasan:
+      "Pembakaran bahan bakar kendaraan melepaskan CO₂ dan gas lain yang memperkuat efek rumah kaca.",
     gambar: null,
   },
   {
@@ -71,6 +83,8 @@ export const postest = [
       "Perubahan pola curah hujan yang memicu kekeringan dan banjir",
     ],
     kunci: 2,
+    pembahasan:
+      "Faktanya, pemanasan global justru mempercepat kerusakan hutan dan menurunkan luas hutan tropis.",
     gambar: null,
   },
   {
@@ -83,6 +97,8 @@ export const postest = [
       "Menyiram jalan dengan air bersih setiap hari untuk mengurangi suhu udara yang panas",
     ],
     kunci: 1,
+    pembahasan:
+      "Penghematan air membantu menjaga ketersediaan air bersih ketika iklim semakin kering dan tidak stabil.",
     gambar: require("../../assets/question/postest_12.png"),
   },
   {
@@ -95,6 +111,8 @@ export const postest = [
       "Suhu dapat meningkat tanpa adanya peningkatan kadar karbon dioksida",
     ],
     kunci: 0,
+    pembahasan:
+      "Data ilmiah menunjukkan pola sejalan atau berbanding lurus, yaitu semakin tinggi konsentrasi CO₂ maka semakin tinggi suhu rata-rata global.",
     gambar: require("../../assets/question/postest_14.png"),
   },
   {
@@ -107,6 +125,8 @@ export const postest = [
       "Sektor Energi lain",
     ],
     kunci: 0,
+    pembahasan:
+      "Sektor limbah memiliki persentase paling rendah dibandingkan sektor industri, pertanian, dan energi.",
     gambar: require("../../assets/question/postest_15.png"),
   },
   {
@@ -119,6 +139,8 @@ export const postest = [
       "Menggunakan bahan bakar yang menghasilkan emisi lebih tinggi untuk meningkatkan performa kendaraan.",
     ],
     kunci: 1,
+    pembahasan:
+      "Transportasi umum mengurangi jumlah kendaraan pribadi sehingga menurunkan polusi udara dan emisi CO₂ secara signifikan.",
     gambar: null,
   },
   {
@@ -131,6 +153,8 @@ export const postest = [
       "Pengasaman air laut akan membuat spesies laut lebih tahan terhadap perubahan lingkungan sehingga hasil perikanan masyarakat pesisir akan meningkat",
     ],
     kunci: 2,
+    pembahasan:
+      "Jika terumbu karang rusak, banyak ikan kehilangan habitat dan sumber makanan, sehingga langsung merugikan masyarakat pesisir yang bergantung pada perikanan.",
     gambar: null,
   },
   {
@@ -143,6 +167,8 @@ export const postest = [
       "Kenaikan permukaan laut menyebabkan banjir di daerah pesisir, mengancam kehidupan manusia dan ekosistem pesisir ",
     ],
     kunci: 3,
+    pembahasan:
+      "Kenaikan air laut membuat wilayah pesisir lebih mudah tergenang dan rentan terhadap abrasi.",
     gambar: require("../../assets/question/postest_18.png"),
   },
   {
@@ -155,6 +181,8 @@ export const postest = [
       "Karena pohon dapat menyerap karbon dioksida dan menghasilkan oksigen",
     ],
     kunci: 3,
+    pembahasan:
+      "Pohon berperan penting dalam mengurangi gas rumah kaca sekaligus meningkatkan kualitas udara lingkungan sekolah.",
     gambar: null,
   },
 ];
