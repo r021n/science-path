@@ -1,14 +1,14 @@
-import { View, Text } from "react-native";
-import React, { useCallback } from "react";
-import * as SplashScreen from "expo-splash-screen";
+import React, { useEffect } from "react";
 import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { SoundProvider } from "../context/soundContext";
 import { AnswerProvider } from "../context/answerContext";
 
+SplashScreen.preventAutoHideAsync().catch(() => {});
+
 const RootLayout = () => {
-  SplashScreen.preventAutoHideAsync();
-  const [fontLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     PBlack: require("../assets/fonts/Poppins-Black.ttf"),
     PBold: require("../assets/fonts/Poppins-Bold.ttf"),
     PSemi: require("../assets/fonts/Poppins-SemiBold.ttf"),
@@ -16,18 +16,27 @@ const RootLayout = () => {
     PRegular: require("../assets/fonts/Poppins-Regular.ttf"),
   });
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontLoaded) {
-      await SplashScreen.hideAsync();
+  useEffect(() => {
+    if (fontError) {
+      console.warn("Error loading fonts:", fontError);
+      SplashScreen.hideAsync().catch(() => {});
     }
-  }, [fontLoaded]);
+  }, [fontError]);
 
-  if (!fontLoaded) return null;
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync().catch(() => {});
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
+
   return (
     <SoundProvider>
       <AnswerProvider>
         <Stack
-          onLayout={onLayoutRootView}
           screenOptions={{
             headerShown: false,
           }}
