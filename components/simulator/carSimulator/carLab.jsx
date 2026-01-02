@@ -13,7 +13,7 @@ const CarLab = () => {
         style={{
           flex: 1,
         }}
-        source={require("../../../assets/html/car_lab.html")}
+        source={{ uri: "https://r021n.github.io/labs/car_lab.html" }}
       />
     </>
   );

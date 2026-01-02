@@ -13,7 +13,7 @@ const GrassLab = () => {
         style={{
           flex: 1,
         }}
-        source={require("../../../assets/html/grass_lab.html")}
+        source={{ uri: "https://r021n.github.io/labs/grass_lab.html" }}
       />
     </>
   );
